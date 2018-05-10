@@ -1,0 +1,4 @@
+com/development/MainApplication.class
+com/development/controller/FindCommonWordsController.class
+com/development/service/FindCommonWordsService.class
+com/development/service/impl/FindCommonWordsServiceImpl.class
