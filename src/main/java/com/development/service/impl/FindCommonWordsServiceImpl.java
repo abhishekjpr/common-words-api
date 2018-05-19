@@ -37,7 +37,7 @@ public class FindCommonWordsServiceImpl implements FindCommonWordsService {
         return result;
     }
 
-    public static HashMap<String, Integer> getCommonWords(String path) throws IOException {
+    private static HashMap<String, Integer> getCommonWords(String path) throws IOException {
         File[] file = new File(path).listFiles();
         HashMap<String, Integer> result = new HashMap<String, Integer>();
         Scanner scanFile = null;
@@ -70,11 +70,11 @@ public class FindCommonWordsServiceImpl implements FindCommonWordsService {
         return result;
     }
 
-    public static String removeSpecialCharacters(String word){
+    private static String removeSpecialCharacters(String word){
         return word.replaceAll("[^a-zA-Z0-9]", "");
     }
 
-    public static void removeUnsedWordFromMap(HashMap<String, Integer> result, Integer incrCount) {
+    private static void removeUnsedWordFromMap(HashMap<String, Integer> result, Integer incrCount) {
 
         Iterator<Map.Entry<String, Integer>> entryIt = result.entrySet().iterator();
         while (entryIt.hasNext()) {
